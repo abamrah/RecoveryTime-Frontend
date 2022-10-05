@@ -78,6 +78,9 @@ with setup:
     else:
        st.warning('you need to upload a csv or excel file.')
 
+    df['Actual start'] = pd.to_datetime(df['Actual start'])
+    df['Act.finish date'] = pd.to_datetime(df['Act.finish date'])
+
 
 with outputmodel:
          st.header('Begin Updating')
